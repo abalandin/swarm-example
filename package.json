@@ -1,0 +1,42 @@
+{
+  "name": "swarm-example",
+  "version": "0.1.0",
+  "description": "swarm js lib usage examples",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "swarm",
+    "example"
+  ],
+  "author": "Victor Grishchenko",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^6.1.0",
+    "browserify-shim": "^3.8.0",
+    "compression": "^1.2.0",
+    "envify": "^3.0.0",
+    "express": "^4.9.7",
+    "minimist": "^1.1.0",
+    "react": "^0.11.2",
+    "reactify": "^0.14.0",
+    "swarm": "^0.3.11",
+    "ws": "^0.4.32"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "scripts": {
+    "prestart": "make dist",
+    "start": "node server.js --models=mice/model:conf/model --port:8000"
+  }
+}
