@@ -19,6 +19,7 @@ table.program {
     font-size: 8pt;
     background: #aaa;
     border-spacing: 2px;
+    font-size: 10px;
 }
 td {
     box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.75);
@@ -26,6 +27,7 @@ td {
     width: 84px;
     max-width: 84px;
     min-width: 84px;
+    overflow: hidden;
 }
 th {
     background: #333;
@@ -56,5 +58,4 @@ span.title {
 }
 span.speakers {
     font-style: italic;
-    white-space: nowrap;
 }
