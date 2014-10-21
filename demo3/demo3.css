@@ -27,7 +27,20 @@ td {
     height: 300px;
     width: 300px;
     max-width: 300px;
-    padding-bottom: 10px;
+}
+
+tr.links, tr.links td {
+    height: 30px;
+    width: 900px;
+    text-align: center;
+    vertical-align: top;
+    font-style: italic;
+    color: #446;
+    padding-bottom: 20px;
+}
+
+tr.links a {
+    color: #337;
 }
 
 iframe.example {
