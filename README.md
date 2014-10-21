@@ -6,49 +6,50 @@ See: https://github.com/gritzko/swarm
 
 ## Getting Started
 
-  * Install NodeJS v0.10 from [nodejs.org](http://nodejs.org/)
+  * Install [node.js](http://nodejs.org/)
     (["learnyounode" nodeschool.io project](https://github.com/rvagg/learnyounode]) can be useful for newbies).
 
-  * Download "swarm-example" repo:
-    `git clone git@github.com:abalandin/swarm-example.git`
+  * Clone "swarm-example" repo:
+    `git clone git@github.com:swarmjs/swarm-example.git`
 
   * Install dependencies:
     `npm install`
 
-  * Start demo app:
+  * Start the demo app:
     `npm start`
 
-  * Open [http://localhost:8000/demo3/index.html/](http://localhost:8000/demo3/index.html/) in browser.
+  * Open [http://localhost:8000/demo3/index.html](http://localhost:8000/demo3/index.html) in the browser.
 
-## Samples
+## Examples
 
-* [demo3/index.html](demo3/index.html) – main page with several iframes.
-* [demo3/Demo3App.js](demo3/Demo3App.js) – parent host for Conference App iframes.
+See all 3 examples on a [single page](demo3/index.html).
 
-### Mice
+### (1) Mice
 
 View:
 
-* [index.html](mice/index.html) – mice sample page (first iframe pair)
+* [index.html](mice/index.html) – mice example (syncs two iframes
+  using WebSocket conn to the server; hover your mouse over iframes)
 * [MiceAppView](mice/view/MiceAppView.js) – application view
-* [MiceView](mice/view/MiceView.js) – all users pointer (set of MouseViews)
-* [MouseView](mice/view/MouseView.js) – all users pointer (set of MouseViews)
+* [MiceView](mice/view/MiceView.js) – React view for the scene
+* [MouseView](mice/view/MouseView.js) – React view for a single
+  mouse pointer
 
 Model:
 
-* [Mouse](mice/model/Mouse.js) – single Mouse model.
-* [Mice](mice/model/Mice.js) – Mice is a set of Mouse.
+* [Mouse](mice/model/Mouse.js) – Mouse model (LWW object).
+* [Mice](mice/model/Mice.js) – Mouse pointer collection (Set).
 
 Controller:
 
-* [MiceAppCtrl](mice/ctrl/MiceAppCtrl.js) – listen for mouse movements and modify users mouse instance.
+* [MiceAppCtrl](mice/ctrl/MiceAppCtrl.js) – tracks user input, writes to the model.
 
 
-### Editor
+### (2) Editor
 
 View:
 
-* [index.html](editor/index.html) – editor sample page (second iframe pair)
+* [index.html](editor/index.html) – plain text editor
 
 Model:
 
@@ -56,18 +57,19 @@ Model:
 
 Controller:
 
-* [EditorApp](editor/EditorApp.js) – create Text instance, listen for user input and change data-object
+* [EditorApp](editor/EditorApp.js) – track input & write to the model
 
-### Conference App
+### (3) Conference App
+
 
 View:
 
-* [index.html](conf/index.html) – conference app sample page (third iframe pair)
+* [index.html](conf/index.html) – conference app (select talks out of 2 tracks)
 * [AgendaView](conf/view/AgendaView.js) - shows table with agenda, catch user clicks
 
 Model:
 
-* [Agenda](conf/model/Agenda.js) – tracks and slots selected by user
+* [Agenda](conf/model/Agenda.js) – the model is a custom CRDT type (given as an example; may easily do without).
 
 Controller:
 
