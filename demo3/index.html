@@ -78,6 +78,27 @@ storage and transport available.
                 </td>
             </tr>
 
+            <tr class='links'>
+                <td colspan='3'>
+                    <a href='/dist/mice/MiceApp.js.html'>App source;</a>
+                    Model:
+                    <a href='/dist/mice/model/Mouse.js.html'>Mouse,</a>
+                    <a href='/dist/mice/model/Mice.js.html'>Mice
+                        (collection);</a>
+                    React views:
+                    <a href='/dist/mice/view/MiceAppView.js.html'>app,</a>
+                    <a
+                        href='/dist/mice/view/MiceView.js.html'>collection,</a>
+                    <a href='/dist/mice/view/MouseView.js.html'>mouse,</a>
+                    <a
+                        href='/dist/mice/model/MiceServerSide.js.html'>server-side
+                model code;</a>
+                    Controller:
+                    <a href='/dist/mice/ctrl/MiceAppCtrl.js.html'>mouse
+                        tracker</a>
+                </td>
+            </tr>
+
             <tr class='example editor'>
                 <td>
                     <iframe class='example' src='../editor/index.html#1'></iframe>
@@ -98,6 +119,13 @@ i.e. purely offline, no server connections used. The text survives <a
                 </td>
             </tr>
 
+            <tr class='links'>
+                <td colspan='3'>
+                    <a href='/dist/editor/EditorApp.js.html'>app
+                        source</a>
+                </td>
+            </tr>
+
             <tr class='example conference'>
                 <td><iframe class='example' src='../conf/index.html#1'></iframe></td>
                 <td class='legend'>
@@ -111,6 +139,23 @@ i.e. purely offline, no server connections used. The text survives <a
                 </td>
 
                 <td><iframe class='example' src='../conf/index.html#2'></iframe></td>
+            </tr>
+
+            <tr class='links'>
+                <td colspan='3'>
+                    <a href='/dist/conf/ConfApp.js.html'>App source,</a>
+                    <a href='/dist/conf/model/Agenda.js.html'>Model</a>
+                    (an example of a custom CRDT type),
+                    <a href='/dist/conf/view/AgendaView.js.html'>View</a>
+                </td>
+            </tr>
+
+            <tr class='links'>
+                <td colspan='3'>
+                    <a href='/dist/demo3/Demo3App.js.html'>Demo3 app
+                        source</a> (the root frame syncs agenda
+                        iframes using postMessage)
+                </td>
             </tr>
 
         </table>
@@ -322,6 +367,11 @@ i.e. purely offline, no server connections used. The text survives <a
     Kafka per-object granularity (not a general bus) client-side
     -->
 
+<!-- CODE -->
+
+        <script src="/dist/demo3.app.js"></script>
+
+
 <!-- SHARING BUTTONS -->
 <a href="https://twitter.com/swarm_js" class="twitter-follow-button" data-show-count="false">Follow @swarm_js</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -345,27 +395,6 @@ i.e. purely offline, no server connections used. The text survives <a
         </div>
 
         <br/>
-
-<!-- CODE -->
-
-        <script src="/dist/demo3.app.js"></script>
-
-<!-- DISQUS -->
-
-        <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'swarmjs';
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
 
         <a href="https://github.com/gritzko/swarm"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
