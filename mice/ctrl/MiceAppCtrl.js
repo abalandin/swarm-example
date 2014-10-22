@@ -32,8 +32,7 @@ function mickeyGo (event) {
 document.documentElement.onmousemove = trackUserMoves;
 document.documentElement.ontouchstart = mickeyGo;
 
-/*(function handleOnlineToggle() {
-    "use strict";
+(function handleOnlineToggle() {
 
     var chk_online = document.getElementById('chk_online');
     if (!chk_online) return;
@@ -45,5 +44,5 @@ document.documentElement.ontouchstart = mickeyGo;
             app.host && app.host.disconnect();
         }
     };
+
 }());
-*/
