@@ -11,14 +11,20 @@ This demo is normally online at http://ppyr.us:8001/demo3/index.html
     (["learnyounode" nodeschool.io project](https://github.com/rvagg/learnyounode]) can be useful for newbies).
 
   * Clone "swarm-example" repo:
-    `git clone https://github.com/swarmjs/swarm-example.git`
-    `cd swarm-example/`
+    ```bash
+    git clone https://github.com/swarmjs/swarm-example.git
+    cd swarm-example/
+    ```
 
   * Install dependencies:
-    `npm install`
+    ```bash
+    npm install
+    ```
 
   * Start the demo app:
-    `npm start`
+    ```bash
+    npm start
+    ```
 
   * Open [http://localhost:8000/demo3/index.html](http://localhost:8000/demo3/index.html) in the browser.
 

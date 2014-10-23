@@ -45,6 +45,21 @@ app.host.on('off', function (spec, val) {
     document.body.setAttribute('connected', app.host.isUplinked());
 });
 
+(function handleOnlineToggle() {
+
+    var chk_online = document.getElementById('chk_online');
+    if (!chk_online) return;
+
+    chk_online.onclick = function () {
+        if (chk_online.checked) {
+            app.host && app.host.connect(app.uplink_uri);
+        } else {
+            app.host && app.host.disconnect();
+        }
+    };
+
+}());
+
 // insert <script> before </body> !
 React.renderComponent(
         AgendaView({spec: app.agendaSpec}),
