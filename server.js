@@ -72,6 +72,11 @@ process.on('SIGTERM', onExit);
 process.on('SIGINT', onExit);
 process.on('SIGQUIT', onExit);
 
+process.on('uncaughtException', function(err) {
+    console.log('uncaught:', err, err.stack);
+    onExit(100);
+});
+
 function onExit(exitCode) {
     console.log('shutting down http-server...');
     httpServer.close();
