@@ -1,6 +1,6 @@
 {
   "name": "swarm-example",
-  "version": "0.1.0",
+  "version": "0.3.21",
   "description": "swarm js lib usage examples",
   "main": "server.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "minimist": "^1.1.0",
     "react": "^0.11.2",
     "reactify": "^0.14.0",
-    "swarm": "^0.3.11",
+    "swarm": "^0.3.21",
     "ws": "^0.4.32"
   },
   "browserify": {

@@ -64,7 +64,7 @@ var wsServer = new ws_lib.Server({
 // accept pipes on connection
 wsServer.on('connection', function (ws) {
     var params = url.parse(ws.upgradeReq.url, true);
-    console.log('incomingWS %s', params.path);
+    console.log('incomingWS %s', params.path, ws.upgradeReq.connection.remoteAddress);
     app.swarmHost.accept(new EinarosWSStream(ws), { delay: 50 });
 });
 
